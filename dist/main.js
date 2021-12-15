@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const user_1 = require("./user");
+const album_1 = require("./album");
+const photo_orientation_1 = require("./photo-orientation");
+const picture_1 = require("./picture");
+const newUser = new user_1.User(1, 'wences', 'reyes', true);
+const newAlbum = new album_1.Album(1, 'my-album');
+const newPicture = new picture_1.Picture(1, 'my-picture', '03-2021', photo_orientation_1.PhotoOrientation.Landscape);
+newAlbum.addPicture(newPicture);
+newUser.addAlbum(newAlbum);
+console.log(newUser);
+console.log(newAlbum);
+console.log(newPicture);
+newUser.removeAlbum(1);
+console.log(newUser);
+console.log(newAlbum);
+console.log(newPicture);
